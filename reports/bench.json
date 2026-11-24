@@ -1,0 +1,85 @@
+{
+  "features": {
+    "prototype_rows_per_s": 3466.473653415435,
+    "vectorised_rows_per_s": 1187867.3016790857,
+    "max_abs_diff_vs_prototype": 9.765625009094947e-05,
+    "max_rel_diff_vs_prototype": 5.689124908725258e-08
+  },
+  "inference": {
+    "prototype_row_loop_ms_per_row": 73.11094350000076,
+    "sklearn_batch1_ms": 70.79469999985122,
+    "onnx_batch1_ms": 0.1829000000270753,
+    "onnx_batch1_end_to_end_ms": 0.6594999999833817,
+    "sklearn_bulk_rows_per_s": 21186.80726102325,
+    "onnx_bulk_rows_per_s": 8027.645225264457,
+    "bulk_rows": 116203
+  },
+  "api": [
+    {
+      "requests": 2000,
+      "concurrency": 1,
+      "throughput_rps": 208.5937713482703,
+      "p50_ms": 4.540450000149576,
+      "p95_ms": 5.551055000159976,
+      "p99_ms": 6.230566999824987,
+      "endpoint": "/predict",
+      "mean_batch": 1.0,
+      "max_batch": 1
+    },
+    {
+      "requests": 2000,
+      "concurrency": 8,
+      "throughput_rps": 249.9855570844354,
+      "p50_ms": 26.649099999985992,
+      "p95_ms": 37.12945999996009,
+      "p99_ms": 42.689867999611124,
+      "endpoint": "/predict",
+      "mean_batch": 1.0,
+      "max_batch": 1
+    },
+    {
+      "requests": 2000,
+      "concurrency": 32,
+      "throughput_rps": 167.23431847558558,
+      "p50_ms": 105.64354999996795,
+      "p95_ms": 124.58230999993702,
+      "p99_ms": 152.5345859997151,
+      "endpoint": "/predict",
+      "mean_batch": 1.0,
+      "max_batch": 1
+    },
+    {
+      "requests": 2000,
+      "concurrency": 1,
+      "throughput_rps": 62.01749670486335,
+      "p50_ms": 15.746449999824108,
+      "p95_ms": 20.09565999987899,
+      "p99_ms": 22.37096299986206,
+      "endpoint": "/predict/batched",
+      "mean_batch": 1.0,
+      "max_batch": 1
+    },
+    {
+      "requests": 2000,
+      "concurrency": 8,
+      "throughput_rps": 292.98279114302693,
+      "p50_ms": 21.756450000111727,
+      "p95_ms": 28.101959999889914,
+      "p99_ms": 30.05243700005394,
+      "endpoint": "/predict/batched",
+      "mean_batch": 2.6214099216710185,
+      "max_batch": 7
+    },
+    {
+      "requests": 2000,
+      "concurrency": 32,
+      "throughput_rps": 210.22716695673466,
+      "p50_ms": 60.4624000000058,
+      "p95_ms": 90.5715799997779,
+      "p99_ms": 106.13015899999482,
+      "endpoint": "/predict/batched",
+      "mean_batch": 7.080139372822299,
+      "max_batch": 22
+    }
+  ]
+}

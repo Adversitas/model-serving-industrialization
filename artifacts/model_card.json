@@ -1,0 +1,64 @@
+{
+  "task": "forest cover type, 7 classes",
+  "classes": [
+    "Spruce/Fir",
+    "Lodgepole Pine",
+    "Ponderosa Pine",
+    "Cottonwood/Willow",
+    "Aspen",
+    "Douglas-fir",
+    "Krummholz"
+  ],
+  "features": [
+    "elevation",
+    "slope",
+    "aspect_sin",
+    "aspect_cos",
+    "hydro_h",
+    "hydro_v",
+    "hydro_dist",
+    "elev_minus_hydro_v",
+    "elev_minus_hydro_h",
+    "road_dist",
+    "fire_dist",
+    "road_plus_fire",
+    "road_minus_fire",
+    "hillshade_9am",
+    "hillshade_noon",
+    "hillshade_3pm",
+    "hillshade_mean",
+    "wilderness",
+    "soil"
+  ],
+  "input_schema": "54 raw UCI CoverType columns, see mlserve.data.RAW_COLUMNS",
+  "versions": {
+    "python": "3.12.10",
+    "scikit-learn": "1.9.1",
+    "onnxruntime": "1.32.0"
+  },
+  "metrics": {
+    "n_train": 464809,
+    "n_test": 116203,
+    "fit_seconds": 74.98491190001369,
+    "n_iter": 200,
+    "hgb_sklearn": {
+      "accuracy": 0.9734516320576921,
+      "macro_f1": 0.9512892152029908
+    },
+    "hgb_onnx": {
+      "accuracy": 0.9734516320576921,
+      "macro_f1": 0.9512892152029908
+    },
+    "linear_baseline": {
+      "accuracy": 0.714207034241801,
+      "macro_f1": 0.5018806393716851
+    },
+    "parity": {
+      "max_abs_proba_diff": 3.666695886417326e-06,
+      "label_agreement": 1.0,
+      "n": 116203
+    },
+    "onnx_bytes": 27323826,
+    "model_version": "029f18442454"
+  }
+}

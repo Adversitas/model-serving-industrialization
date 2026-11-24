@@ -1,0 +1,25 @@
+{
+  "n_train": 464809,
+  "n_test": 116203,
+  "fit_seconds": 74.98491190001369,
+  "n_iter": 200,
+  "hgb_sklearn": {
+    "accuracy": 0.9734516320576921,
+    "macro_f1": 0.9512892152029908
+  },
+  "hgb_onnx": {
+    "accuracy": 0.9734516320576921,
+    "macro_f1": 0.9512892152029908
+  },
+  "linear_baseline": {
+    "accuracy": 0.714207034241801,
+    "macro_f1": 0.5018806393716851
+  },
+  "parity": {
+    "max_abs_proba_diff": 3.666695886417326e-06,
+    "label_agreement": 1.0,
+    "n": 116203
+  },
+  "onnx_bytes": 27323826,
+  "model_version": "029f18442454"
+}
